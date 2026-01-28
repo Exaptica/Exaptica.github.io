@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Exaptica — Projects</title>
+  <meta name="description" content="Exaptica Labs project portal and demos." />
+  <style>
+    :root{
+      --bg:#0b0f17;
+      --panel:rgba(255,255,255,0.06);
+      --border:rgba(255,255,255,0.10);
+      --text:rgba(255,255,255,0.92);
+      --muted:rgba(255,255,255,0.70);
+      --shadow:0 14px 40px rgba(0,0,0,0.35);
+      --radius:18px;
+    }
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:var(--text);
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      background:
+        radial-gradient(1200px 600px at 20% 0%, rgba(120,119,198,0.22), transparent 60%),
+        radial-gradient(900px 500px at 80% 10%, rgba(0, 200, 255, 0.16), transparent 55%),
+        var(--bg);
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 18px 48px}
+    .top{
+      display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+    h1{margin:0;font-size:28px;letter-spacing:-0.02em}
+    .subtitle{margin:6px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+    .badge{
+      padding:8px 12px;border:1px solid var(--border);border-radius:999px;
+      background:rgba(255,255,255,0.05);color:var(--muted);font-size:12px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap:14px;
+      margin-top:18px;
+    }
+    @media (max-width: 980px){ .grid{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width: 640px){ .grid{grid-template-columns:1fr} }
+
+    .card{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:16px;
+      backdrop-filter: blur(10px);
+      display:flex;
+      flex-direction:column;
+      min-height:180px;
+    }
+    .card h2{margin:0 0 6px;font-size:16px}
+    .card p{margin:0 0 12px;color:var(--muted);font-size:13px;line-height:1.35}
+    .meta{margin-top:auto;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{
+      font-size:11px;color:var(--muted);
+      border:1px solid rgba(255,255,255,0.12);
+      background:rgba(255,255,255,0.04);
+      padding:6px 10px;border-radius:999px;
+    }
+    .actions{
+      display:flex;gap:10px;flex-wrap:wrap;margin-top:12px
+    }
+    .btn{
+      text-decoration:none;
+      padding:9px 12px;border-radius:12px;
+      border:1px solid rgba(255,255,255,0.14);
+      background:rgba(255,255,255,0.08);
+      color:var(--text);
+      font-weight:650;
+      font-size:12px;
+    }
+    .btn:hover{background:rgba(255,255,255,0.12)}
+    .btn.primary{
+      border-color: rgba(0,200,255,0.35);
+      background: rgba(0,200,255,0.14);
+    }
+    footer{margin-top:22px;color:rgba(255,255,255,0.50);font-size:12px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <h1>Exaptica — Project Portal</h1>
+        <p class="subtitle">
+          Research codebases, demos, and interactive tools. Select a project to view the repository or launch a live demo.
+        </p>
+      </div>
+      <div class="badge">Exaptica.github.io</div>
+    </div>
+
+    <div class="grid">
+      <!-- CARD: QD Design Database Tool -->
+      <div class="card">
+        <h2>QD Archives as Design Databases</h2>
+        <p>
+          Interactive tool for querying quality-diversity archives beyond fitness rankings:
+          filter, similarity search, diverse retrieval, pin/compare, and export.
+        </p>
+        <div class="actions">
+          <a class="btn" href="https://github.com/Exaptica/hil-qd-archive-exploration" target="_blank" rel="noreferrer">Repo</a>
+          <!-- Replace this with your deployed URL (Render/Fly/HF) -->
+          <a class="btn primary" href="https://huggingface.co/spaces/bitsOfAlejandro/hi1-qd-archive-exploration?tab=app" target="_blank" rel="noreferrer">Launch Demo</a>
+        </div>
+        <div class="meta">
+          <span class="tag">CDVE 2026</span>
+          <span class="tag">QD</span>
+          <span class="tag">Visual Analytics</span>
+          <span class="tag">Dash</span>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      Tip: GitHub Pages is static. Live demos are hosted separately and linked from cards.
+    </footer>
+  </div>
+</body>
+</html>
